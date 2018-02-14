@@ -1,0 +1,16 @@
+	For a BUNGLE! developer worried about SQL injections, they could implement parameterized queries. 
+This forces the developer to predefine what is SQL code and where the inputs will come into play.
+This is important as this makes a clear distinction between data and code and prevents malicious
+code to penetrate the system in the form of data.
+	Regarding XSS attacks, a BUNGLE! developer should be escaping user input similar to what we saw in
+parts 2.1-2.4. Escaping common HTML/Javascript characters makes it difficult to imbed malicious 
+code into an application. Next, a developer can validate the input to a page insofar as to ensure
+that only "good" characters are being added and that an application is rendering the correct information,
+i.e. pages and data. Lastly, a developer should be sanitizing input to clean HTML formatted data. There
+are several open source libraries available for such a task.
+	Lastly, in order for BUNGLE! developers to protect themselves against CSRF attacks, developers
+could implement Anti-CSRF tokens. While BUNGLE! developers attempted this, XSS vulnerabilities 
+prevented this token from being truly effective. Further, for this token to be effective, it must 
+be cryptographically secure in order for the token cannot be guessed and the system broken. Also,
+developers could implement same-site cookies. These cookies can only be sent if the request is 
+being made from the same origin. The origin is considered the same if the port and host is the same.
